@@ -1,0 +1,1 @@
+export const BASE_API_URL = 'https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/births';

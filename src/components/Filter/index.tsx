@@ -21,7 +21,7 @@ const Filter: React.FC<Props> = ({ date, updateResults }) => {
   };
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const regex = /^[a-zA-Z]+$/;
+    const regex = /^[a-zA-Z\s]+$/;
     if (regex.test(event.target.value) || event.target.value === '') {
       setSearchTerm(event.target.value);
     }
@@ -32,7 +32,7 @@ const Filter: React.FC<Props> = ({ date, updateResults }) => {
       <div style={{ fontWeight: 'bold', fontSize: 14 }}>{formatDate(date)}</div>
       <div style={{ display: 'flex', alignItems: 'center', paddingTop: 8 }}>
         <div style={{ fontSize: 14, fontWeight: 'normal', paddingRight: 8 }}>Search</div>
-        <input type="text" value={searchTerm} onChange={handleSearchChange} style={{ fontSize: 14, fontWeight: 'normal' }} />
+        <input title="filterInput" type="text" value={searchTerm} onChange={handleSearchChange} style={{ fontSize: 14, fontWeight: 'normal' }} />
       </div>
     </div>
   );

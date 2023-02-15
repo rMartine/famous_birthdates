@@ -55,7 +55,7 @@ const Home: React.FC = () => {
 
     return (
         <div style={style}>
-            <div>
+            <div style={{flex: 1}}>
                 <Calendar />
                 <Filter
                     date={date}
@@ -71,7 +71,10 @@ const Home: React.FC = () => {
                     height="25%"
                 />
             </div>
-            <div style={{paddingLeft: 25}}>
+            <div style={{
+                paddingLeft: 25,
+                flex: 1,
+            }}>
                 <Scroll
                     RenderItem={ItemFavs}
                     itemType={ScrollableListItemTypes.FAVS}

@@ -1,3 +1,12 @@
+export enum ScrollableListItemTypes {
+    FAVS = 'FAVS',
+    REGS = 'REGS',
+}
+
+export interface ScrollableListItem {
+    type: ScrollableListItemTypes.FAVS | ScrollableListItemTypes.REGS;
+}
+
 export interface Person {
     text?: string;
 }
@@ -5,6 +14,12 @@ export interface Person {
 export interface PersonWithBirthDate extends Person {
     day: number;
     month: number;
+}
+
+export interface PersonWithBirthDateGroup {
+    day: number;
+    month: number;
+    text: string[];
 }
 
 export interface AppState {

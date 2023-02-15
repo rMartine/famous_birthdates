@@ -21,7 +21,7 @@ const appReducer = (state = initialState, action: AppAction): AppState => {
         case ActionType.ADD_PEOPLE_TO_FAVORITES:
             return {
                 ...state,
-                peopleWithBirthDate: state.peopleWithBirthDate.concat(action.payload),
+                peopleWithBirthDate: action.payload,
             };
         default:
             return state;
